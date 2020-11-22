@@ -1,7 +1,13 @@
 class StudentsController < ApplicationController
 
   def index
-    @students = Students.all
+    # if params[:name]
+      # @students = Student.search(params[:name].split.map(&:capitalize).join(' '))
+    # else
+    #   @students = Student.all
+    # end
+    @students = Student.search(params[:query])
+    render 'index'
   end
 
   def new

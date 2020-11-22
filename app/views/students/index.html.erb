@@ -1,7 +1,7 @@
 <%= form_tag students_path(@students), method: :get do %>
 <p>
-  <%= text_field_tag :name, params[:name] %>
-  <%= submit_tag "Search", name: nil %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag "Search", query: nil %>
 </p>
 
 <% end %>
